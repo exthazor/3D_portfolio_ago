@@ -5,6 +5,7 @@ import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
 import { Bird, Island, Plane, Sky } from "../models";
+import Tokyo from "../models/Tokyo";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -85,22 +86,23 @@ const Home = () => {
             intensity={1}
           />
 
-          <Bird />
-          <Sky isRotating={isRotating} />
-          <Island
+          {/* <Bird /> */}
+          {/* <Sky isRotating={isRotating} /> */}
+          {/* <Island
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
             position={islandPosition}
             rotation={[0.1, 4.7077, 0]}
             scale={islandScale}
-          />
-          <Plane
+          /> */}
+          {/* <Plane
             isRotating={isRotating}
             position={biplanePosition}
             rotation={[0, 20.1, 0]}
             scale={biplaneScale}
-          />
+          /> */}
+          <Tokyo />
         </Suspense>
       </Canvas>
 
